@@ -1,3 +1,3 @@
 #!/bin/bash
 
-/etc/init.d/httpd start
+/bin/systemctl start httpd.service
