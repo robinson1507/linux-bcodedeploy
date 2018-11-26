@@ -12,8 +12,19 @@ permissions:
    group: 644
    type:
      - file
-
-
+ - object: scripts
+   pattern: webserver-stop.sh
+   owner: apache
+   mode: 755
+   type:
+     - file
+ - object: scripts
+   pattern: webserver-start.sh
+   owner: apache
+   mode: 755
+   type:
+     - file
+     
 hooks:
   BeforeInstall:
     - location: scripts/webserver-stop.sh
